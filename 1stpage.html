@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Math Quest - Welcome</title>
+  <title>Welcome Back Screen</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Courier New', monospace;
+      font-family: 'Verdana', sans-serif;
       background-color: #3e2f28;
       display: flex;
       justify-content: center;
@@ -17,43 +17,49 @@
 
     .container {
       background-color: #f37b1d;
-      background-image: url('your-background-pattern.png'); /* Optional texture image */
       width: 300px;
       height: 600px;
-      border-radius: 10px;
       padding: 20px;
       box-sizing: border-box;
+      border-radius: 10px;
+      text-align: center;
+      background-image: url('your-pattern.png'); /* Optional background texture */
       position: relative;
     }
 
     .profile {
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
+      gap: 8px;
     }
 
     .profile img {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       object-fit: cover;
-      margin-right: 8px;
     }
 
-    .profile span {
+    .level-tag {
       background-color: #eee;
-      padding: 4px 8px;
-      border-radius: 20px;
+      padding: 2px 8px;
+      border-radius: 12px;
       font-size: 12px;
-      color: #333;
     }
 
     .welcome {
-      margin: 40px 0 20px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
-      text-align: center;
+      margin: 30px 0 20px;
       color: #000;
+      font-family: 'Courier New', monospace;
+      letter-spacing: 1px;
+    }
+
+    .welcome span {
+      display: block;
+      font-size: 20px;
+      font-weight: 900;
     }
 
     .button {
@@ -64,30 +70,51 @@
       margin: 10px 0;
       width: 100%;
       font-size: 14px;
-      cursor: pointer;
       font-family: 'Courier New', monospace;
+      cursor: pointer;
     }
 
     .button:hover {
-      background-color: #d5d5d5;
+      background-color: #d2d2d2;
+    }
+
+    .bottom-icons {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-around;
+      padding: 0 20px;
+    }
+
+    .bottom-icons img {
+      width: 28px;
+      height: 28px;
     }
   </style>
 </head>
 <body>
-
   <div class="container">
+    <!-- Profile section -->
     <div class="profile">
-      <img src="profile.png" alt="Profile Picture" />
-      <span>lvl 200</span>
+      <img src="profile.png" alt="Profile" />
+      <div class="level-tag">lvl 200</div>
     </div>
 
-    <div class="welcome">Welcome back,<br>Benny Beaver!</div>
+    <!-- Welcome text -->
+    <div class="welcome">
+      WELCOME BACK<br>
+      <span>BENNY BEAVER!</span>
+    </div>
 
+    <!-- Buttons -->
     <button class="button">Start Today's Quest!</button>
     <button class="button"></button>
     <button class="button"></button>
     <button class="button"></button>
-  </div>
 
-</body>
-</html>
+    <!-- Bottom icons -->
+    <div class="bottom-icons">
+      <img src="icon-x.png" alt="Icon 1">
+      <img src
